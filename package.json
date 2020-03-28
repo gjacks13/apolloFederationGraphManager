@@ -8,16 +8,19 @@
     "start-service-products": "nodemon services/products/index.js",
     "start-service-inventory": "nodemon services/inventory/index.js",
     "start-services": "concurrently \"npm:start-service-*\"",
-    "postinstall": "lerna bootstrap"
+    "start-all": "concurrently -n services,gateway \"yarn start-services\" \"wait-on http://localhost:4001/.well-known/apollo/server-health && yarn start-gateway\""
   },
   "devDependencies": {
-    "lerna": "latest",
-    "nodemon": "latest",
-    "concurrently": "latest"
+    "concurrently": "^5.1.0",
+    "nodemon": "latest"
   },
   "dependencies": {
     "@apollo/gateway": "latest",
     "apollo-server": "latest",
-    "graphql": "latest"
+    "graphql": "latest",
+    "wait-on": "^4.0.1"
+  },
+  "engines": {
+    "node": "13.6.0"
   }
 }
