@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/federation@^0.13.2":
+"@apollo/federation@^0.13.2", "@apollo/federation@latest":
   version "0.13.2"
   resolved "https://redventures.jfrog.io/redventures/api/npm/npm-rvapps/@apollo/federation/-/federation-0.13.2.tgz#a9f842abd1619fe5cd732c56cfbc45dab0ae784a"
   integrity sha1-qfhCq9Fhn+XNcyxWz7xF2rCueEo=

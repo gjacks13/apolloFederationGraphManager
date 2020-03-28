@@ -1,4 +1,6 @@
 {
+  "private": true,
+  "version": "1.0.0",
   "name": "inventory",
   "scripts": {
     "start": "node index.js"

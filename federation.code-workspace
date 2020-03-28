@@ -2,19 +2,19 @@
   "folders": [
     {
       "name": "Accounts",
-      "path": "./services/accounts"
+      "path": "accounts"
     },
     {
       "name": "Inventory",
-      "path": "./services/inventory"
+      "path": "inventory"
     },
     {
       "name": "Products",
-      "path": "./services/products"
+      "path": "products"
     },
     {
       "name": "Reviews",
-      "path": "./services/reviews"
+      "path": "reviews"
     },
     {
       "name": "Root",

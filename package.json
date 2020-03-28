@@ -1,14 +1,21 @@
 {
+  "private": true,
+  "workspaces": [
+    "accounts",
+    "inventory",
+    "products",
+    "reviews"
+  ],
   "name": "federation-demo",
   "main": "gateway.js",
   "scripts": {
-    "start-gateway": "nodemon gateway.js",
-    "start-service-accounts": "nodemon services/accounts/index.js",
-    "start-service-reviews": "nodemon services/reviews/index.js",
-    "start-service-products": "nodemon services/products/index.js",
-    "start-service-inventory": "nodemon services/inventory/index.js",
+    "start-gateway": "node gateway.js",
+    "start-service-accounts": "node services/accounts/index.js",
+    "start-service-reviews": "node services/reviews/index.js",
+    "start-service-products": "node services/products/index.js",
+    "start-service-inventory": "node services/inventory/index.js",
     "start-services": "concurrently \"npm:start-service-*\"",
-    "start-all": "concurrently -n services,gateway \"yarn start-services\" \"wait-on http://localhost:4001/.well-known/apollo/server-health && yarn start-gateway\""
+    "start-all": "concurrently -n accounts,inventory,reviews,products,gateway \"yarn workspace accounts start\" \"yarn workspace inventory start\" \"yarn workspace reviews start\" \"yarn workspace products start\" \"wait-on http://localhost:4001/.well-known/apollo/server-health && yarn start-gateway\""
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
