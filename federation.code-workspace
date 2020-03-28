@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "name": "Accounts",
+      "path": "./services/accounts"
+    },
+    {
+      "name": "Inventory",
+      "path": "./services/inventory"
+    },
+    {
+      "name": "Products",
+      "path": "./services/products"
+    },
+    {
+      "name": "Reviews",
+      "path": "./services/reviews"
+    },
+    {
+      "name": "Root",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ]
+  },
+  "extensions": {
+    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+  }
+}
