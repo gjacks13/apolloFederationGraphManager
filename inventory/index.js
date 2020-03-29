@@ -38,7 +38,7 @@ const server = new ApolloServer({
   playground: true
 });
 
-server.listen({ port: 4004 }).then(({ url }) => {
+server.listen({ port: process.env.PORT }).then(({ url }) => {
   console.log(`🚀 Inventory Server ready at ${url}`);
 });
 

@@ -40,7 +40,7 @@ const server = new ApolloServer({
   playground: true
 });
 
-server.listen({ port: 4001 }).then(({ url }) => {
+server.listen({ port: process.env.PORT }).then(({ url }) => {
   console.log(`🚀 Accounts Server ready at ${url}`);
 });
 
