@@ -1,5 +1,11 @@
 {
   "private": true,
+  "workspaces": [
+    "accounts",
+    "inventory",
+    "products",
+    "reviews"
+  ],
   "name": "federation-demo",
   "main": "gateway.js",
   "scripts": {
