@@ -52,7 +52,8 @@ const server = new ApolloServer({
       typeDefs,
       resolvers
     }
-  ])
+  ]),
+  playground: true
 });
 
 server.listen({ port: 4002 }).then(({ url }) => {
