@@ -15,8 +15,8 @@
     "start-service-products": "node services/products/index.js",
     "start-service-inventory": "node services/inventory/index.js",
     "start-services": "concurrently \"npm:start-service-*\"",
-    "start-all": "concurrently -n accounts,inventory,reviews,products,gateway \"yarn workspace accounts start\" \"yarn workspace inventory start\" \"yarn workspace reviews start\" \"yarn workspace products start\" \"wait-on http://localhost:4001/.well-known/apollo/server-health && yarn start-gateway\"",
-    "start": "yarn run start-all"
+    "start-all": "concurrently -n accounts,inventory,reviews,products,gateway \"yarn start-service-accounts\" \"yarn workspace inventory start\" \"yarn workspace reviews start\" \"yarn workspace products start\" \"wait-on http://localhost:4001/.well-known/apollo/server-health && yarn start-gateway\"",
+    "start": "node gateway.js"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
