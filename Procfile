@@ -1,1 +1,1 @@
-web: node gateway.js
+web: npm start
