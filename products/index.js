@@ -37,7 +37,7 @@ const server = new ApolloServer({
   playground: true
 });
 
-server.listen({ port: process.env.PORT }).then(({ url }) => {
+server.listen({ port: process.env.PORT || 4003 }).then(({ url }) => {
   console.log(`🚀 Products Server ready at ${url}`);
 });
 
