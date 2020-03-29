@@ -1,1 +1,1 @@
-web: sh -c 'cd ./reviews/ && npm start'
+web: node index.js

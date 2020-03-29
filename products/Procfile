@@ -1,1 +1,1 @@
-web: sh -c 'cd ./products/ && npm start'
+web: node index.js
