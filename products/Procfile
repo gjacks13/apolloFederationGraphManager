@@ -1,1 +1,1 @@
-web: cd products &&  start
+web: sh -c 'cd ./products/ && npm start'

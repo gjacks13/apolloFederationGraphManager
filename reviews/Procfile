@@ -1,1 +1,1 @@
-web: cd reviews && npm start
+web: sh -c 'cd ./reviews/ && npm start'
