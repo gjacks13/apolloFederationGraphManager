@@ -1,34 +1,13 @@
 {
   "private": true,
-  "workspaces": [
-    "accounts",
-    "inventory",
-    "products",
-    "reviews"
-  ],
-  "name": "federation-demo",
-  "main": "gateway.js",
+  "version": "1.0.0",
+  "name": "reviews",
   "scripts": {
-    "start-gateway": "node gateway.js",
-    "start-service-accounts": "node services/accounts/index.js",
-    "start-service-reviews": "node services/reviews/index.js",
-    "start-service-products": "node services/products/index.js",
-    "start-service-inventory": "node services/inventory/index.js",
-    "start-services": "concurrently \"npm:start-service-*\"",
-    "start-all": "concurrently -n accounts,inventory,reviews,products,gateway \"yarn start-service-accounts\" \"yarn workspace inventory start\" \"yarn workspace reviews start\" \"yarn workspace products start\" \"wait-on http://localhost:4001/.well-known/apollo/server-health && yarn start-gateway\"",
-    "start": "node gateway.js"
-  },
-  "devDependencies": {
-    "concurrently": "^5.1.0",
-    "nodemon": "latest"
+    "start": "node index.js"
   },
   "dependencies": {
-    "@apollo/gateway": "latest",
+    "@apollo/federation": "latest",
     "apollo-server": "latest",
-    "graphql": "latest",
-    "wait-on": "^4.0.1"
-  },
-  "engines": {
-    "node": "13.6.0"
+    "graphql": "latest"
   }
 }
