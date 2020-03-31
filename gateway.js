@@ -1,7 +1,26 @@
 const { ApolloServer } = require("apollo-server");
 const { ApolloGateway } = require("@apollo/gateway");
 
-const gateway = new ApolloGateway();
+const gateway = new ApolloGateway({
+  serviceList: [
+    {
+      name: "accounts-test",
+      url: process.env.ACCOUNTS_URL || "http://localhost:4001"
+    },
+    {
+      name: "inventory-test",
+      url: process.env.INVENTORY_URL || "http://localhost:4002"
+    },
+    {
+      name: "products-test",
+      url: process.env.PRODUCTS_URL || "http://localhost:4003"
+    },
+    {
+      name: "reviews-test",
+      url: process.env.REVIEWS_URL || "http://localhost:4004"
+    }
+  ]
+});
 
 (async () => {
   const server = new ApolloServer({
