@@ -1,5 +1,5 @@
 module.exports = {
   service: {
-    name: "gateway-test1234"
-  }
+    name: "experiment-626",
+  },
 };
