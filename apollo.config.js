@@ -1,5 +1,5 @@
 module.exports = {
   service: {
-    name: "products-test"
+    name: "accounts-test"
   }
 };
